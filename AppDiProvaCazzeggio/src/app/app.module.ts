@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { AreaPrivataComponent } from './area-privata/area-privata.component';
+import { FormGamesComponent } from './area-privata/form-games/form-games.component';
+import { FormSeriesComponent } from './area-privata/form-series/form-series.component';
+import { Page404Component } from './page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { AreaPrivataComponent } from './area-privata/area-privata.component';
     FooterComponent,
     HomeComponent,
     CatalogoComponent,
-    AreaPrivataComponent
+    AreaPrivataComponent,
+    FormGamesComponent,
+    FormSeriesComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
