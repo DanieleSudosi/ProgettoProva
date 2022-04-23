@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServizioPrivatoService } from './service/servizio-privato.service';
 
 @Component({
   selector: 'app-area-privata',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AreaPrivataComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private caricaServizio: ServizioPrivatoService) { }
 
   ngOnInit(): void {
+    // this.caricaServizio.evento().subscribe(feeds => {
+    // this.mieiFeedbacks = feeds;
+    //   console.log(feeds);
   }
 
 }
