@@ -9,7 +9,7 @@ import { ServizioPrivatoService } from './service/servizio-privato.service';
 export class AreaPrivataComponent implements OnInit {
 
 
-  constructor(private caricaServizio: ServizioPrivatoService) { }
+  constructor() { } //private caricaServizio: ServizioPrivatoService
 
   ngOnInit(): void {
     // this.caricaServizio.evento().subscribe(feeds => {
