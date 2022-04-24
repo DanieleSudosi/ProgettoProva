@@ -1,3 +1,13 @@
+.catalogo{
+    letter-spacing: 4px;
+    font-size: 3rem;
+}
+
+.card:hover{
+    cursor: pointer;
+    padding: 5px;
+}
+
 .card-title{
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
