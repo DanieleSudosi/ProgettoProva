@@ -1,6 +1,9 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AreaPrivataComponent } from './area-privata/area-privata.component';
+import { FormGamesComponent } from './area-privata/form-games/form-games.component';
+import { FormMangaComponent } from './area-privata/form-manga/form-manga.component';
+import { FormSeriesComponent } from './area-privata/form-series/form-series.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { HomeComponent } from './home/home.component';
 import { Page404Component } from './page404/page404.component';
@@ -12,7 +15,11 @@ const routes: Routes = [
 
 
   //area privata
-  {path: 'private', component: AreaPrivataComponent },
+  {path: 'private', component: AreaPrivataComponent, children:[
+    {path: 'addGames', component: FormGamesComponent},
+    {path: 'addSeries', component: FormSeriesComponent},
+    {path: 'addManga', component: FormMangaComponent}
+  ] },
 
 
 

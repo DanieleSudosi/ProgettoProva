@@ -13,6 +13,7 @@ import { AreaPrivataComponent } from './area-privata/area-privata.component';
 import { FormGamesComponent } from './area-privata/form-games/form-games.component';
 import { FormSeriesComponent } from './area-privata/form-series/form-series.component';
 import { Page404Component } from './page404/page404.component';
+import { FormMangaComponent } from './area-privata/form-manga/form-manga.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { Page404Component } from './page404/page404.component';
     AreaPrivataComponent,
     FormGamesComponent,
     FormSeriesComponent,
-    Page404Component
+    Page404Component,
+    FormMangaComponent
   ],
   imports: [
     BrowserModule,
