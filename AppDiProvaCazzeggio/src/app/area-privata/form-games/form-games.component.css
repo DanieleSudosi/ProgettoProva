@@ -1,4 +1,10 @@
-/* .games{
-    padding: 2rem 15rem; 
+.games{
+    /* margin: 2rem 15rem; */
+    padding: 4rem 5rem; 
     border: 1px solid black;
-} */
+    border-radius: 10px;
+}
+
+.lung{
+    width: 3.5%;
+}
