@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { dbMangaService } from './db-manga.service';
 
 @Component({
   selector: 'app-form-manga',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormMangaComponent implements OnInit {
 
-  constructor() { }
+  mangas = []
+
+  constructor(private dbMangaService: dbMangaService) { }
 
   ngOnInit(): void {
+
+  }
+
+  creaManga(dataManga: {title: string, mangaka: string, genre: string, publisher: string, release: string, status: string, volumi: number, price: number, description: string, img: string}){
+    this.dbMangaService.addManga(dataManga.title, dataManga.mangaka, dataManga.genre, dataManga.publisher, dataManga.release, dataManga.status, dataManga.volumi, dataManga.price, dataManga.description, dataManga.img)
   }
 
 }

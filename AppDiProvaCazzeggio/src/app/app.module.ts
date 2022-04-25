@@ -31,7 +31,8 @@ import { FormMangaComponent } from './area-privata/form-manga/form-manga.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

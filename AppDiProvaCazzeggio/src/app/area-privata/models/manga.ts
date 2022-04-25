@@ -7,6 +7,7 @@ export class manga{
     status: string;
     volumi: number;
     price: number;
+    description: string;
     img: string;
 
 
