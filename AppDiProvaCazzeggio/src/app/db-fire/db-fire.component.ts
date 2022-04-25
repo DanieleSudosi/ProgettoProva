@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { dbService } from './db.service';
 
 @Component({
   selector: 'app-db-fire',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DbFireComponent implements OnInit {
 
-  constructor() { }
+  games = []
+
+  constructor(private dbService: dbService) { }
 
   ngOnInit(): void {
+
+  }
+
+  creaGame(dataGame: {title: string, softHouse: string, genre: string, publisher: string, release: string, price: number, description: string, img:string}){
+    this.dbService.addGame(dataGame.title, dataGame.softHouse, dataGame.genre, dataGame.publisher, dataGame.release, dataGame.price, dataGame.description, dataGame.img)
   }
 
 }
