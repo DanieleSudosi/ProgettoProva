@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Game } from "../area-privata/models/game";
+import { Game } from "../models/game";
 
 @Injectable({
     providedIn: 'root'

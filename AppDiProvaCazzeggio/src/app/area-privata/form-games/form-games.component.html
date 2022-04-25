@@ -5,34 +5,34 @@
         <form #gameForm="ngForm" (ngSubmit)="creaGame(gameForm.value)">
             <div class="input-group flex-nowrap py-2">
                 <span class="input-group-text lung" id="addon-wrapping"><i class="fa-solid fa-t"></i></span>
-                <input type="text" class="form-control" placeholder="Titolo" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Titolo" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="title">
                 <span class="input-group-text ms-5 lung" id="addon-wrapping"><i class="fa-solid fa-s"></i></span>
-                <input type="text" class="form-control" placeholder="Sviluppatore" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Sviluppatore" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="softHouse">
             </div>
             <div class="input-group flex-nowrap py-2">
                 <span class="input-group-text lung" id="addon-wrapping"><i class="fa-solid fa-g"></i></span>
-                <input type="text" class="form-control" placeholder="Genere" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Genere" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="genre">
                 <span class="input-group-text ms-5 lung" id="addon-wrapping"><i class="fa-solid fa-p"></i></span>
-                <input type="text" class="form-control" placeholder="Publisher" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Publisher" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="publisher">
             </div>
             <div class="input-group flex-nowrap py-2">
                 <span class="input-group-text lung" id="addon-wrapping"><i class="fa-solid fa-d"></i></span>
-                <input type="text" class="form-control" placeholder="Data di rilascio" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Data di rilascio" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="release">
                 <span class="input-group-text ms-5 lung" id="addon-wrapping"><i class="fa-solid fa-euro-sign"></i></span>
-                <input type="text" class="form-control" placeholder="Prezzo" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Prezzo" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="price">
             </div>
             <div class="input-group py-2">
                 <span class="input-group-text">Descrizione</span>
-                <textarea class="form-control" aria-label="With textarea" style="resize: none;" rows="3"></textarea>
+                <textarea class="form-control" aria-label="With textarea" style="resize: none;" rows="3" required ngModel name="description"></textarea>
             </div>
 
             <div class="input-group py-2">
                 <span class="input-group-text">Immagine</span>
-                <input type="text" class="form-control" placeholder="Inserisci l'URL dell'immagine" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Inserisci l'URL dell'immagine" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="img">
             </div>
 
             <div class="text-center mt-4">
-                <button type="submit" class="btn btn-secondary">AGGIUNGI</button>
+                <button type="submit" class="btn btn-secondary" [disabled]="!gameForm.valid">AGGIUNGI</button>
             </div>
         </form>
 

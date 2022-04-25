@@ -14,7 +14,6 @@ import { FormGamesComponent } from './area-privata/form-games/form-games.compone
 import { FormSeriesComponent } from './area-privata/form-series/form-series.component';
 import { Page404Component } from './page404/page404.component';
 import { FormMangaComponent } from './area-privata/form-manga/form-manga.component';
-import { DbFireComponent } from './db-fire/db-fire.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +26,12 @@ import { DbFireComponent } from './db-fire/db-fire.component';
     FormGamesComponent,
     FormSeriesComponent,
     Page404Component,
-    FormMangaComponent,
-    DbFireComponent
+    FormMangaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

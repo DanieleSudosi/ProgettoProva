@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ServizioPrivatoService } from './service/servizio-privato.service';
 
 @Component({
   selector: 'app-area-privata',
