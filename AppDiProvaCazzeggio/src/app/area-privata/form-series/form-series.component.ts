@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { dbSerieService } from './db-serie.service';
 
 @Component({
   selector: 'app-form-series',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormSeriesComponent implements OnInit {
 
-  constructor() { }
+  series = []
+
+  constructor(private dbSerieService: dbSerieService) { }
 
   ngOnInit(): void {
+  }
+
+  creaSerie(dataSerie: {title: string, production: string, genre: string, actors: string, release: string, status: string, price: number, writer: string, description: string, img: string}){
+    this.dbSerieService.addSerie(dataSerie.title, dataSerie.production, dataSerie.genre, dataSerie.actors, dataSerie.release, dataSerie.status, dataSerie.price, dataSerie.writer, dataSerie.description, dataSerie.img)
   }
 
 }

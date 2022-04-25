@@ -6,7 +6,7 @@ export class serieTv{
     release: string;
     status: string;
     price: number;
+    writer: string;
     description: string;
     img: string;
-    id?: number;
 }
