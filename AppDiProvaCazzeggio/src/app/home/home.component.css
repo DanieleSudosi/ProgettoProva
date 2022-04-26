@@ -1,42 +1,9 @@
-
-
-.title{
-    text-align: center;
-}
-
-.giochi{
-    text-align:center;
-}
-
-.serie{
-    text-align:center;
-}
-
-.manga{
-    text-align:center;
-}
-
 .card img{
     border-radius: 12px;
     /* box-shadow: 0px 0px 5px; */
 }
 
 .card{
-    border: 0px;
-}
-
-.giochi{
-    border-radius: 10px;
-    border: 0px;
-}
-
-.serie{
-    border-radius: 10px;
-    border: 0px;
-}
-
-.manga{
-    border-radius: 10px;
     border: 0px;
 }
 
