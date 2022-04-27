@@ -5,7 +5,7 @@
     <div class="container-fluid my-5">
         <div class="row">
         <div class="col-4">
-            <div class="card bg-dark text-white" style="height: 14rem;">
+            <div class="card bg-dark text-white" style="height: 14rem;" (click)="catGames()">
                 <img src="../../assets/img/videogiochi.jpg" class="card-img h-100 opacity-25">
                 <div class="card-img-overlay h-25 mx-0 my-auto">
                   <h5 class="card-title text-center fs-3 text-white fw-bolder">VIDEO GAMES</h5>
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="col-4">
-            <div class="card bg-dark text-white" style="height: 14rem;">
+            <div class="card bg-dark text-white" style="height: 14rem;" (click)="catSerie()">
                 <img src="../../assets/img/serietv.jpeg" class="card-img h-100 opacity-25">
                 <div class="card-img-overlay h-25 mx-0 my-auto">
                   <h5 class="card-title text-center fs-3 text-white fw-bolder">SERIE TV</h5>
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="col-4">
-            <div class="card bg-dark text-white" style="height: 14rem;">
+            <div class="card bg-dark text-white" style="height: 14rem;" (click)="catManga()">
                 <img src="../../assets/img/anime.jpg" class="card-img h-100 opacity-25">
                 <div class="card-img-overlay h-25 mx-0 my-auto">
                   <h5 class="card-title text-center fs-3 text-white fw-bolder">MANGA</h5>
@@ -29,5 +29,8 @@
             </div>
         </div>
     </div>
+
+    <router-outlet></router-outlet>
+
 </div>
 </div>

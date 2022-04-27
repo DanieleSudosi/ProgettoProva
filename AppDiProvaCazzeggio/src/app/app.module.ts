@@ -14,6 +14,9 @@ import { FormGamesComponent } from './area-privata/form-games/form-games.compone
 import { FormSeriesComponent } from './area-privata/form-series/form-series.component';
 import { Page404Component } from './page404/page404.component';
 import { FormMangaComponent } from './area-privata/form-manga/form-manga.component';
+import { CatGamesComponent } from './catalogo/cat-games/cat-games.component';
+import { CatSerieComponent } from './catalogo/cat-serie/cat-serie.component';
+import { CatMangaComponent } from './catalogo/cat-manga/cat-manga.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { FormMangaComponent } from './area-privata/form-manga/form-manga.compone
     FormGamesComponent,
     FormSeriesComponent,
     Page404Component,
-    FormMangaComponent
+    FormMangaComponent,
+    CatGamesComponent,
+    CatSerieComponent,
+    CatMangaComponent
   ],
   imports: [
     BrowserModule,

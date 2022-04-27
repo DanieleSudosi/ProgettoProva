@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-catalogo',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  catGames(){
+    this.router.navigate(['catGames'],{relativeTo: this.route})
+  }
+  catSerie(){
+    this.router.navigate(['catSerie'],{relativeTo: this.route})
+  }
+  catManga(){
+    this.router.navigate(['catManga'],{relativeTo: this.route})
   }
 
 }

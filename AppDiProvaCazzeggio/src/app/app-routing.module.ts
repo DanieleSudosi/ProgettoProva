@@ -4,6 +4,9 @@ import { AreaPrivataComponent } from './area-privata/area-privata.component';
 import { FormGamesComponent } from './area-privata/form-games/form-games.component';
 import { FormMangaComponent } from './area-privata/form-manga/form-manga.component';
 import { FormSeriesComponent } from './area-privata/form-series/form-series.component';
+import { CatGamesComponent } from './catalogo/cat-games/cat-games.component';
+import { CatMangaComponent } from './catalogo/cat-manga/cat-manga.component';
+import { CatSerieComponent } from './catalogo/cat-serie/cat-serie.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { HomeComponent } from './home/home.component';
 import { Page404Component } from './page404/page404.component';
@@ -11,7 +14,11 @@ import { Page404Component } from './page404/page404.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   //catalogo
-  {path: 'catalogo', component: CatalogoComponent },
+  {path: 'catalogo', component: CatalogoComponent, children:[
+    {path: "catGames", component: CatGamesComponent},
+    {path: "catSerie", component: CatSerieComponent},
+    {path: "catManga", component: CatMangaComponent},
+  ] },
 
 
   //area privata
