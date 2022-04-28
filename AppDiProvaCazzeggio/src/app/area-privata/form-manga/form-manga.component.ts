@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { dbMangaService } from './db-manga.service';
 
 @Component({
@@ -12,12 +13,14 @@ export class FormMangaComponent implements OnInit {
 
   constructor(private dbMangaService: dbMangaService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
-  }
-
-  creaManga(dataManga: {title: string, mangaka: string, genre: string, publisher: string, release: string, status: string, volumi: number, price: number, description: string, img: string}){
+  creaManga(dataManga: {title: string, mangaka: string, genre: string, publisher: string, release: string, status: string, volumi: number, price: number, description: string, img: string}, mioForm){
     this.dbMangaService.addManga(dataManga.title, dataManga.mangaka, dataManga.genre, dataManga.publisher, dataManga.release, dataManga.status, dataManga.volumi, dataManga.price, dataManga.description, dataManga.img)
+    this.clearFilter(mioForm)
   }
 
+  clearFilter(mioForm: NgForm){
+    mioForm.reset()
+  }
 }
