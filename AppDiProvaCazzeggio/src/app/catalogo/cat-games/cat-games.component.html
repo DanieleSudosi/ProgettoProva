@@ -2,7 +2,10 @@
     <div class="row">
         <div class="col-3 px-4 my-5" *ngFor="let data of dataGame">
             <div class="card">
-                <img src="{{data.img}}" class="card-img-top rounded-3" alt="" style="height: 21rem;">
+                <img src="{{data.img}}" class="card-img-top rounded-3" alt="" style="height: 23rem;">
+                <div class="card-bordy">
+                    <h3>{{data.title}}</h3>
+                </div>
             </div>
         </div>
     </div>
