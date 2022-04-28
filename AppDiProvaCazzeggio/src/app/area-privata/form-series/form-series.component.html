@@ -2,7 +2,7 @@
     <h1 class="text-center mb-4">Serie TV</h1>
 
     <div class="gruppo">
-        <form #serieForm="ngForm" (ngSubmit)="creaSerie(serieForm.value)">
+        <form #serieForm="ngForm" (ngSubmit)="creaSerie(serieForm.value, serieForm)">
             <div class="input-group flex-nowrap py-2">
                 <span class="input-group-text lung" id="addon-wrapping"><i class="fa-solid fa-t"></i></span>
                 <input type="text" class="form-control" placeholder="Titolo" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="title">

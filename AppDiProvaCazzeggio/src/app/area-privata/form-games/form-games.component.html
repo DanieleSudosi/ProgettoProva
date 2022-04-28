@@ -2,7 +2,7 @@
     <h1 class="text-center mb-4">Videogiochi</h1>
 
     <div class="gruppo">
-        <form #gameForm="ngForm" (ngSubmit)="creaGame(gameForm.value)">
+        <form #gameForm="ngForm" (ngSubmit)="creaGame(gameForm.value, gameForm)">
             <div class="input-group flex-nowrap py-2">
                 <span class="input-group-text lung" id="addon-wrapping"><i class="fa-solid fa-t"></i></span>
                 <input type="text" class="form-control" placeholder="Titolo" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="title">
