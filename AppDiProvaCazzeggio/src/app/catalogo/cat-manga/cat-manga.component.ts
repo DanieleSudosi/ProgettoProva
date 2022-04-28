@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { articoliService } from 'src/app/service/articoli.service';
 
 @Component({
   selector: 'app-cat-manga',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatMangaComponent implements OnInit {
 
-  constructor() { }
+  dataManga = []
+
+  constructor(private mangaService: articoliService) { }
 
   ngOnInit(): void {
+    this.mangaService.getManga().subscribe(data =>{
+      this.dataManga = data
+    })
   }
 
 }

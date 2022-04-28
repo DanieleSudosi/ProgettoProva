@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { articoliService } from 'src/app/service/articoli.service';
 
 @Component({
   selector: 'app-cat-serie',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatSerieComponent implements OnInit {
 
-  constructor() { }
+  dataSerie = []
+
+  constructor(private serieService: articoliService) { }
 
   ngOnInit(): void {
+    this.serieService.getSerie().subscribe(data =>{
+      this.dataSerie = data
+    })
   }
 
 }
