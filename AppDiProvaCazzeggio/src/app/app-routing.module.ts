@@ -30,7 +30,7 @@ const routes: Routes = [
   ] },
 
   //single game
-  {path: "single:id", component: SingleGameComponent},
+  {path: "single", component: SingleGameComponent},
 
 
   //errori
