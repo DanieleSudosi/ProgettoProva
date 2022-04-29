@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { map } from "rxjs";
+import { map, switchMap } from "rxjs";
 import { Game } from "../area-privata/models/game";
 import { manga } from "../area-privata/models/manga";
 import { serieTv } from "../area-privata/models/serieTv";
@@ -48,5 +48,6 @@ export class articoliService{
             return serieArray
         })) 
     }
+
 
 }
