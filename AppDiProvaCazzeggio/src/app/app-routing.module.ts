@@ -30,12 +30,12 @@ const routes: Routes = [
   ] },
 
   //single game
-  {path: "single", component: SingleGameComponent},
+  {path: ":title", component: SingleGameComponent},
 
 
   //errori
-  {path: 'not-found', component: Page404Component},
-  {path: '**', redirectTo: 'not-found'} 
+  // {path: 'not-found', component: Page404Component},
+  // {path: '**', redirectTo: 'not-found'} 
 ];
 
 @NgModule({

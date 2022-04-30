@@ -1,4 +1,6 @@
+import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Game } from 'src/app/area-privata/models/game';
 import { articoliService } from 'src/app/service/articoli.service';
 
 @Component({
@@ -9,13 +11,15 @@ import { articoliService } from 'src/app/service/articoli.service';
 export class CatGamesComponent implements OnInit {
 
   dataGame = []
-
   constructor(private gameService: articoliService) { }
 
   ngOnInit(): void {
     this.gameService.getGames().subscribe(data =>{
       this.dataGame = data
+      console.log();
     })
   }
+
+  
 
 }

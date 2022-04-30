@@ -8,6 +8,8 @@ import { Game } from '../area-privata/models/game';
 })
 export class SingleGameComponent implements OnInit {
 
+  singleGame: Game
+
   constructor() { }
 
   ngOnInit(): void { 
