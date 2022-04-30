@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Game } from '../area-privata/models/game';
 
 @Component({
   selector: 'app-single-game',
@@ -8,13 +7,11 @@ import { Game } from '../area-privata/models/game';
 })
 export class SingleGameComponent implements OnInit {
 
-  singleGame: Game
 
   constructor() { }
 
   ngOnInit(): void { 
     
-
   }
 
   }

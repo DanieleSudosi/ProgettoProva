@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Game } from '../area-privata/models/game';
 
 @Component({
   selector: 'app-catalogo',
@@ -7,6 +8,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent implements OnInit {
+
+  dataGame: Game
 
   constructor(private route: ActivatedRoute,
               private router: Router) { }
@@ -23,5 +26,5 @@ export class CatalogoComponent implements OnInit {
   catManga(){
     this.router.navigate(['catManga'],{relativeTo: this.route})
   }
-
+  
 }

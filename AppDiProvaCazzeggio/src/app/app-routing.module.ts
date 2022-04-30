@@ -10,7 +10,7 @@ import { CatSerieComponent } from './catalogo/cat-serie/cat-serie.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { HomeComponent } from './home/home.component';
 import { Page404Component } from './page404/page404.component';
-import { SingleGameComponent } from './single-game/single-game.component';
+import { SingleGameComponent } from './catalogo/single-game/single-game.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},

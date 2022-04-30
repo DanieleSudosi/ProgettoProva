@@ -1,5 +1,5 @@
 import { HttpParams } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { Game } from 'src/app/area-privata/models/game';
 import { articoliService } from 'src/app/service/articoli.service';
 
@@ -11,15 +11,18 @@ import { articoliService } from 'src/app/service/articoli.service';
 export class CatGamesComponent implements OnInit {
 
   dataGame = []
+  dataSingleGame: Game
   constructor(private gameService: articoliService) { }
 
   ngOnInit(): void {
     this.gameService.getGames().subscribe(data =>{
       this.dataGame = data
-      console.log();
     })
   }
 
+  getSingleGame(data: Game){
+    this.dataSingleGame = data
+    console.log(this.dataSingleGame);
+  }
   
-
 }

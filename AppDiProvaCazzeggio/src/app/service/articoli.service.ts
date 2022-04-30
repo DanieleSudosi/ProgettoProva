@@ -13,9 +13,7 @@ import { serieTv } from "../area-privata/models/serieTv";
 export class articoliService{
 
 
-    constructor(private http: HttpClient,
-                private route: ActivatedRoute,
-                private router: Router){  }
+    constructor(private http: HttpClient){  }
 
     getGames(){
         return this.http.get("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/games.json")
@@ -53,10 +51,6 @@ export class articoliService{
         })) 
     }
 
-    getSingleGame(title: string, softHouse: string, genre: string, publisher: string, release: string, price: number, description: string, img:string){
-        let httpParams = new HttpParams({ fromObject: {title: title, softHouse: softHouse, genre: genre, publisher: publisher, release: release, price: price, description: description, img:img}})
-        console.log(httpParams);
-        
-      }
+    
 
 }

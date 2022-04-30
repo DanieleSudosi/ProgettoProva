@@ -8,5 +8,8 @@ export class Game{
     description: string;
     img: string;
     id?: number;
+    
+    constructor(){ }
 
+    
 }
