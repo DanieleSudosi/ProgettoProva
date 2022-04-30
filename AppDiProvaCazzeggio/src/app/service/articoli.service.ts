@@ -1,6 +1,5 @@
-import { HttpClient, HttpParams } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
 import { map } from "rxjs";
 import { Game } from "../area-privata/models/game";
 import { manga } from "../area-privata/models/manga";
@@ -50,7 +49,5 @@ export class articoliService{
             return serieArray
         })) 
     }
-
-    
 
 }

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-3 px-4 my-4" *ngFor="let data of dataSerie">
             <div class="card border-0">
-                <a routerLink="/single">
+                <a (click)="getSingleSerie(this.data)" routerLink="/{{data.title}}">
                     <img src="{{data.img}}" class="card-img-top rounded-3" alt="" style="height: 23rem;">
                 </a>
                 <div class="card-bordy">
