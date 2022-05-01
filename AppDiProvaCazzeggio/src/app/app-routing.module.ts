@@ -20,7 +20,7 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 const routes: Routes = [
   {path: '', component: HomeComponent},
 
-  {path: 'private', redirectTo: "/sign-in", pathMatch: "full"},
+  // {path: 'private', redirectTo: "/sign-in", pathMatch: "full"},
   {path: 'sign-in', component: SignInComponent},
   {path: 'register-user', component: SignUpComponent},
   {path: 'dashboard', component: DashboardComponent},
