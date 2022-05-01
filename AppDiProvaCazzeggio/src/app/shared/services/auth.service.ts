@@ -97,7 +97,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['private']);
+          this.router.navigate(['dashboard']);
         });
         this.SetUserData(result.user);
       })
