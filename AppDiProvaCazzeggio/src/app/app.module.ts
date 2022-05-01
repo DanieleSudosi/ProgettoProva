@@ -18,6 +18,12 @@ import { CatGamesComponent } from './catalogo/cat-games/cat-games.component';
 import { CatSerieComponent } from './catalogo/cat-serie/cat-serie.component';
 import { CatMangaComponent } from './catalogo/cat-manga/cat-manga.component';
 import { SingleGameComponent } from './catalogo/single-game/single-game.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -40,7 +46,12 @@ import { SingleGameComponent } from './catalogo/single-game/single-game.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

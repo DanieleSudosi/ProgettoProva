@@ -1,6 +1,6 @@
-<div class="container-fluid my-5">
+<div class="container-fluid border-2 border-top py-4">
     <div class="row">
-        <div class="col-3 px-4 my-4" *ngFor="let data of dataSerie">
+        <div class="col-xl-3 col-lg-6 col-md-6 px-4 my-4" *ngFor="let data of dataSerie">
             <div class="card border-0">
                 <a (click)="getSingleSerie(this.data)" routerLink="/{{data.title}}">
                     <img src="{{data.img}}" class="card-img-top rounded-3" alt="" style="height: 23rem;">

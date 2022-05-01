@@ -27,4 +27,6 @@ export class CatalogoComponent implements OnInit {
     this.router.navigate(['catManga'],{relativeTo: this.route})
   }
   
+  
+
 }
