@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { User } from './user';
-import { FirebaseApp } from 'firebase/app';
+import * as auth from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -89,7 +89,7 @@ export class AuthService {
 
    // Sign in with Google
    GoogleAuth() {
-    return this.AuthLogin(new firebase.auth.GoogleAuthProvider()).then((res: any) => {
+    return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
       if (res) {
         this.router.navigate(['dashboard']);
       }
