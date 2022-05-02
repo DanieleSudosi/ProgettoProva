@@ -17,6 +17,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { AuthGuard } from './shared/guard/auth.guard';
+import { SingleSerieComponent } from './catalogo/single-serie/single-serie.component';
+import { SingleMangaComponent } from './catalogo/single-manga/single-manga.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -44,7 +46,14 @@ const routes: Routes = [
   ] },
 
   //single game
-  {path: ":title", component: SingleGameComponent},
+  {path: "game/:title", component: SingleGameComponent},
+
+  //single serie
+  {path: "serie/:title", component: SingleSerieComponent},
+
+  //single manga
+  {path: "manga/:title", component: SingleMangaComponent},
+
 
 
   //errori

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Game } from 'src/app/area-privata/models/game';
+import { articoliService } from 'src/app/service/articoli.service';
 
 @Component({
   selector: 'app-single-game',
@@ -6,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-game.component.css']
 })
 export class SingleGameComponent implements OnInit {
+  
+  game: Game
 
-
-  constructor() { }
+  constructor(private gameService: articoliService) { }
 
   ngOnInit(): void { 
-    
+    this.game = this.gameService.game
+    // console.log(this.game);  
   }
+
 
   }
 

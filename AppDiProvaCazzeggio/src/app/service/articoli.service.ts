@@ -11,6 +11,9 @@ import { serieTv } from "../area-privata/models/serieTv";
 
 export class articoliService{
 
+    game: Game
+    serie: serieTv
+    manga: manga
 
     constructor(private http: HttpClient){  }
 
@@ -48,6 +51,18 @@ export class articoliService{
             }
             return serieArray
         })) 
+    }
+
+    readGame(data: Game){
+        this.game = data
+    }
+
+    readSerie(data: serieTv){
+        this.serie = data
+    }
+
+    readManga(data: manga){
+        this.manga = data
     }
 
 }

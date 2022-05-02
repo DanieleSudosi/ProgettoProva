@@ -6,24 +6,26 @@
     <div class="first py-3">
         <div class="row m-0 pe-5 py-5">
             <div class="col-5" style="height: 45rem;">
-                <img src="{{game.img}}" class="rounded-3" style="height: 100%; width: 100%;">
+                <img src="{{manga.img}}" class="rounded-3" style="height: 100%; width: 100%;">
             </div>
             <div class="col-1"></div>
             <div class="col-6 border border-1 rounded-3 bg-light py-5 px-5">
-                <h1 class="text-center">{{game.title}}</h1>
+                <h1 class="text-center">{{manga.title}}</h1>
                 <div class="row mt-5">
                     <div class="col-6">
-                        <p>Sviluppatore: <strong>{{game.softHouse}}</strong></p>
-                        <p>Genere: <strong>{{game.genre}}</strong></p>
+                        <p>Sviluppatore: <strong>{{manga.mangaka}}</strong></p>
+                        <p>Genere: <strong>{{manga.genre}}</strong></p>
+                        <p>Volumi: <strong>{{manga.volumi}}</strong></p>
                     </div>
                     <div class="col-6">
-                        <p>Publisher: <strong>{{game.publisher}}</strong></p>
-                        <p>Data di rilascio: <strong>{{game.release}}</strong></p>
+                        <p>Publisher: <strong>{{manga.publisher}}</strong></p>
+                        <p>Data di rilascio: <strong>{{manga.release}}</strong></p>
+                        <p>Status: <strong>{{manga.status}}</strong></p>
                     </div>
                 </div>
                 <p class="text-center mt-3"><strong>Descrizione</strong></p>
-                <p>{{game.description}}</p>
-                <h3 class="text-center fs-1 mt-5 mb-0">{{game.price}}€</h3>
+                <p>{{manga.description}}</p>
+                <h3 class="text-center fs-1 mt-5 mb-0">{{manga.price}}€</h3>
                 <div class="btn-group w-100 mt-5 px-5">
                     <button class="btn btn-danger w-25"><i class="fa-solid fa-heart"></i></button>
                     <button class="btn btn-warning w-75">ACQUISTA</button>
@@ -42,3 +44,4 @@
         </div>
     </div>
 </div>
+

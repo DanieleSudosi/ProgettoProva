@@ -10,7 +10,6 @@ import { articoliService } from 'src/app/service/articoli.service';
 export class CatMangaComponent implements OnInit {
 
   dataManga = []
-  dataSingleManga: manga
   constructor(private mangaService: articoliService) { }
 
   ngOnInit(): void {
@@ -20,8 +19,7 @@ export class CatMangaComponent implements OnInit {
   }
 
   getSingleManga(data: manga){
-    this.dataSingleManga = data
-    console.log(this.dataSingleManga);
+    this.mangaService.readManga(data)
   }
 
 }

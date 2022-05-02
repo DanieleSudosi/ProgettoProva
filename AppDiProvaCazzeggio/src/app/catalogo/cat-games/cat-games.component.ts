@@ -11,7 +11,6 @@ import { articoliService } from 'src/app/service/articoli.service';
 export class CatGamesComponent implements OnInit {
 
   dataGame = []
-  dataSingleGame: Game
   constructor(private gameService: articoliService) { }
 
   ngOnInit(): void {
@@ -21,8 +20,8 @@ export class CatGamesComponent implements OnInit {
   }
 
   getSingleGame(data: Game){
-    this.dataSingleGame = data
-    console.log(this.dataSingleGame);
+    // console.log(data);
+    this.gameService.readGame(data)
   }
   
 }

@@ -30,6 +30,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { AuthService } from './shared/services/auth.service';
+import { SingleSerieComponent } from './catalogo/single-serie/single-serie.component';
+import { SingleMangaComponent } from './catalogo/single-manga/single-manga.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { AuthService } from './shared/services/auth.service';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    SingleSerieComponent,
+    SingleMangaComponent
   ],
   imports: [
     BrowserModule,

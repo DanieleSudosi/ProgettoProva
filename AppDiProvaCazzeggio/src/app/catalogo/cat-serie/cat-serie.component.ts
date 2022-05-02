@@ -10,7 +10,6 @@ import { articoliService } from 'src/app/service/articoli.service';
 export class CatSerieComponent implements OnInit {
 
   dataSerie = []
-  dataSingleSerie: serieTv
   constructor(private serieService: articoliService) { }
 
   ngOnInit(): void {
@@ -20,7 +19,6 @@ export class CatSerieComponent implements OnInit {
   }
 
   getSingleSerie(data: serieTv){
-    this.dataSingleSerie = data
-    console.log(this.dataSingleSerie);
+    this.serieService.readSerie(data)
   }
 }
