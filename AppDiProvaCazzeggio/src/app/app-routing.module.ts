@@ -59,6 +59,9 @@ const routes: Routes = [
   //errori
   // {path: 'not-found', component: Page404Component},
   // {path: '**', redirectTo: 'not-found'} 
+
+  //join us
+
 ];
 
 @NgModule({
