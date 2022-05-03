@@ -1,17 +1,17 @@
-<div class="container-lg my-5">
-  
-  <h2 class="text-center text-success fs-1 my-3">Area Privata</h2>
-
-  <p class="text-center fs-4 my-0">Inserimento articoli</p>
-
-  <div class="text-center my-5">
-    <div class="btn-group w-100" role="group" aria-label="Basic example">
-      <button type="button" class="btn border border-dark rounded-3 fs-5 py-3 text-black shadow-none mx-5" (click)="addGames()">VIDEOGAMES</button>
-      <button type="button" class="btn border border-dark rounded-3 fs-5 py-3 text-black shadow-none mx-5" (click)="addSeries()">SERIE TV</button>
-      <button type="button" class="btn border border-dark rounded-3 fs-5 py-3 text-black shadow-none mx-5" (click)="addManga()">MANGA</button>
+  <div class="container-lg py-5">
+    
+    <h2 class="text-center text-success fs-1">Area Privata</h2>
+    
+    <p class="text-center fs-4 my-0">Inserimento articoli</p>
+    
+    <div class="text-center">
+      <div class="btn-group w-100" role="group" aria-label="Basic example">
+        <button type="button" class="btn border border-dark rounded-3 fs-5 py-3 text-black shadow-none mx-5" (click)="addGames()">VIDEOGAMES</button>
+        <button type="button" class="btn border border-dark rounded-3 fs-5 py-3 text-black shadow-none mx-5" (click)="addSeries()">SERIE TV</button>
+        <button type="button" class="btn border border-dark rounded-3 fs-5 py-3 text-black shadow-none mx-5" (click)="addManga()">MANGA</button>
+      </div>
     </div>
+    
+    <router-outlet></router-outlet>
+    
   </div>
-  
-  <router-outlet></router-outlet>
-
-</div>
