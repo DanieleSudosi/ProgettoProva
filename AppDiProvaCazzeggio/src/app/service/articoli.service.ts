@@ -1,6 +1,7 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { map } from "rxjs";
+import { AngularFireDatabase } from "@angular/fire/compat/database";
+import { map, Observable } from "rxjs";
 import { Game } from "../area-privata/models/game";
 import { manga } from "../area-privata/models/manga";
 import { serieTv } from "../area-privata/models/serieTv";
@@ -15,7 +16,8 @@ export class articoliService{
     serie: serieTv
     manga: manga
 
-    constructor(private http: HttpClient){  }
+    constructor(private http: HttpClient,
+                private db: AngularFireDatabase){  }
 
     getGames(){
         return this.http.get("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/games.json")
@@ -64,5 +66,6 @@ export class articoliService{
     readManga(data: manga){
         this.manga = data
     }
+
 
 }

@@ -16,6 +16,8 @@ export class CatGamesComponent implements OnInit {
   ngOnInit(): void {
     this.gameService.getGames().subscribe(data =>{
       this.dataGame = data
+      // console.log(data);
+      
     })
   }
 
