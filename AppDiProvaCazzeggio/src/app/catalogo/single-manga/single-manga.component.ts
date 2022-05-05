@@ -14,7 +14,7 @@ export class SingleMangaComponent implements OnInit {
   constructor(private mangaService: articoliService) { }
 
   ngOnInit(): void {
-    this.manga = this.mangaService.manga
+
   }
 
 }

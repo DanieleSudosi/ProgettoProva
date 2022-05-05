@@ -46,13 +46,13 @@ const routes: Routes = [
   ] },
 
   //single game
-  {path: "game/:title", component: SingleGameComponent},
+  {path: "game/:id", component: SingleGameComponent},
 
   //single serie
-  {path: "serie/:title", component: SingleSerieComponent},
+  {path: "serie/:id", component: SingleSerieComponent},
 
   //single manga
-  {path: "manga/:title", component: SingleMangaComponent},
+  {path: "manga/:id", component: SingleMangaComponent},
 
 
 

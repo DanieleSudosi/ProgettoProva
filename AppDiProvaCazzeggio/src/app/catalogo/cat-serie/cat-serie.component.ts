@@ -18,7 +18,7 @@ export class CatSerieComponent implements OnInit {
     })
   }
 
-  getSingleSerie(data: serieTv){
-    this.serieService.readSerie(data)
-  }
+  // getSingleSerie(data: serieTv){
+  //   this.serieService.readSerie(data)
+  // }
 }

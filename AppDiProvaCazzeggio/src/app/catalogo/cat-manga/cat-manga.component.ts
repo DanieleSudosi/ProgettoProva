@@ -18,8 +18,8 @@ export class CatMangaComponent implements OnInit {
     })
   }
 
-  getSingleManga(data: manga){
-    this.mangaService.readManga(data)
-  }
+  // getSingleManga(data: manga){
+  //   this.mangaService.readManga(data)
+  // }
 
 }

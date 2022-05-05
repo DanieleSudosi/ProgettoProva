@@ -22,8 +22,8 @@ export class CatGamesComponent implements OnInit {
     })
   }
 
-  getSingleGame(data: Game){
-    this.gameService.readGame(data)
-  }
+  // getSingleGame(data: Game){
+  //   this.gameService.readGame(data)
+  // }
   
 }

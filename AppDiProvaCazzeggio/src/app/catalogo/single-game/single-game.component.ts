@@ -14,8 +14,7 @@ export class SingleGameComponent implements OnInit {
   constructor(private gameService: articoliService) { }
 
   ngOnInit(): void { 
-    this.game = this.gameService.game
-    // console.log(this.game);  
+
   }
 
 

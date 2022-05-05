@@ -33,40 +33,44 @@ export class articoliService{
     }
 
     getManga(){
-        return this.http.get("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/manga.json")
+        return this.http.get<{[key: string]: manga}>("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/manga.json")
         .pipe(map(data =>{
             const mangaArray: manga[] = []
 
             for(let key in data){
-                mangaArray.push(data[key])
+                if(data.hasOwnProperty(key)){
+                mangaArray.push({...data[key], id: key})
+                }
             }
             return mangaArray
         })) 
     }
 
     getSerie(){
-        return this.http.get("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/serie.json")
+        return this.http.get<{[key: string]: serieTv}>("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/serie.json")
         .pipe(map(data =>{
             const serieArray: serieTv[] = []
 
             for(let key in data){
-                serieArray.push(data[key])
+                if(data.hasOwnProperty(key)){
+                serieArray.push({...data[key], id: key})
+                }
             }
             return serieArray
         })) 
     }
 
-    readGame(data: Game){
-        this.game = data
-    }
+    // readGame(data: Game){
+    //     this.game = data
+    // }
 
-    readSerie(data: serieTv){
-        this.serie = data
-    }
+    // readSerie(data: serieTv){
+    //     this.serie = data
+    // }
 
-    readManga(data: manga){
-        this.manga = data
-    }
+    // readManga(data: manga){
+    //     this.manga = data
+    // }
 
 
 }

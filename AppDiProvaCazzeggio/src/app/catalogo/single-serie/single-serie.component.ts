@@ -14,7 +14,7 @@ export class SingleSerieComponent implements OnInit {
   constructor(private serieService: articoliService) { }
 
   ngOnInit(): void {
-    this.serie = this.serieService.serie
+    
   }
 
 }
