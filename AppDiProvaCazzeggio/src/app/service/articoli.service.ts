@@ -16,16 +16,17 @@ export class articoliService{
     serie: serieTv
     manga: manga
 
-    constructor(private http: HttpClient,
-                private db: AngularFireDatabase){  }
+    constructor(private http: HttpClient){  }
 
     getGames(){
-        return this.http.get("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/games.json")
+        return this.http.get<{[key: string]: Game}>("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/games.json")
         .pipe(map(data =>{
             const gameArray: Game[] = []
 
             for(let key in data){
-                gameArray.push(data[key])
+                if(data.hasOwnProperty(key)){
+                gameArray.push({...data[key], id: key})
+                }
             }
             return gameArray
         }))        

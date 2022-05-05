@@ -9,6 +9,7 @@ export class manga{
     price: number;
     description: string;
     img: string;
+    id?: string;
 
 
 }

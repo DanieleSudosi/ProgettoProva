@@ -9,4 +9,5 @@ export class serieTv{
     writer: string;
     description: string;
     img: string;
+    id?: string;
 }

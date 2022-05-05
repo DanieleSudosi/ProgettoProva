@@ -7,6 +7,7 @@ export class Game{
     price: number;
     description: string;
     img: string;
+    id?: string;
     
     
     constructor(){ }
