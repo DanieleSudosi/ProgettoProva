@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Game } from 'src/app/area-privata/models/game';
 import { articoliService } from 'src/app/service/articoli.service';
 
@@ -11,10 +12,18 @@ export class SingleGameComponent implements OnInit {
   
   game: Game
 
-  constructor(private gameService: articoliService) { }
+  constructor(private gameService: articoliService,
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit(): void { 
 
+    this.route.params.subscribe(
+      (params: Params)=>{
+        this.game = this.gameService.getSingleGame(params['id'])
+       }
+    )
+    
   }
 
 

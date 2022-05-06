@@ -11,12 +11,13 @@ import { serieTv } from "../area-privata/models/serieTv";
 })
 
 export class articoliService{
-
-    game: Game
-    serie: serieTv
-    manga: manga
+    
+    allGames: Game[];
+    allManga: manga[];
+    allSerie: serieTv[];
 
     constructor(private http: HttpClient){  }
+
 
     getGames(){
         return this.http.get<{[key: string]: Game}>("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/games.json")
@@ -28,6 +29,7 @@ export class articoliService{
                 gameArray.push({...data[key], id: key})
                 }
             }
+            this.allGames = gameArray;
             return gameArray
         }))        
     }
@@ -42,6 +44,7 @@ export class articoliService{
                 mangaArray.push({...data[key], id: key})
                 }
             }
+            this.allManga = mangaArray;
             return mangaArray
         })) 
     }
@@ -56,21 +59,19 @@ export class articoliService{
                 serieArray.push({...data[key], id: key})
                 }
             }
+            this.allSerie = serieArray
             return serieArray
         })) 
     }
 
-    // readGame(data: Game){
-    //     this.game = data
-    // }
-
-    // readSerie(data: serieTv){
-    //     this.serie = data
-    // }
-
-    // readManga(data: manga){
-    //     this.manga = data
-    // }
+    getSingleGame(id: string){
+        const game = this.allGames.find(
+            (g) =>{
+                return g.id === id
+            }
+        )
+        return game
+    }
 
 
 }
