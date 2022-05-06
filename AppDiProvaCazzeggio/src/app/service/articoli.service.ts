@@ -65,11 +65,14 @@ export class articoliService{
     }
 
     getSingleGame(id: string){
+        
         const game = this.allGames.find(
             (g) =>{
                 return g.id === id
             }
         )
+        console.log(this.allGames);
+        
         return game
     }
 

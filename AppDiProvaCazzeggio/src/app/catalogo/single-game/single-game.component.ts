@@ -21,6 +21,8 @@ export class SingleGameComponent implements OnInit {
     this.route.params.subscribe(
       (params: Params)=>{
         this.game = this.gameService.getSingleGame(params['id'])
+        // console.log(this.game);
+        
        }
     )
     
