@@ -1,7 +1,6 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { AngularFireDatabase } from "@angular/fire/compat/database";
-import { map, Observable } from "rxjs";
+import { map } from "rxjs";
 import { Game } from "../area-privata/models/game";
 import { manga } from "../area-privata/models/manga";
 import { serieTv } from "../area-privata/models/serieTv";
@@ -67,13 +66,27 @@ export class articoliService{
     }
 
     getSingleGame(id: string){
-
         const game = this.allGames.find(
             (g) =>{
                 return g.id === id
             }
         )
-        
+        return game
+    }
+    getSingleSerie(id: string){
+        const game = this.allSerie.find(
+            (g) =>{
+                return g.id === id
+            }
+        )
+        return game
+    }
+    getSingleManga(id: string){
+        const game = this.allManga.find(
+            (g) =>{
+                return g.id === id
+            }
+        )
         return game
     }
 

@@ -10,15 +10,20 @@ import { articoliService } from 'src/app/service/articoli.service';
 })
 export class SingleSerieComponent implements OnInit {
 
-  serie:serieTv
+  dataSerie: serieTv[]
+  serie:serieTv = new serieTv()
 
   constructor(private serieService: articoliService,
-              private route: ActivatedRoute,
-              private router: Router) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    
-    
+    this.serieService.getSerie().subscribe(data => {
+      this.dataSerie = data
+      this.route.paramMap.subscribe((obs) => {
+        const id = obs.get("id")
+        this.serie = this.serieService.getSingleSerie(id)
+      })
+    })    
   }
 
 }

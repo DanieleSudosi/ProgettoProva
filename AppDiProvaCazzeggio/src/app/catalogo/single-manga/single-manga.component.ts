@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { manga } from 'src/app/area-privata/models/manga';
 import { articoliService } from 'src/app/service/articoli.service';
 
@@ -9,12 +10,20 @@ import { articoliService } from 'src/app/service/articoli.service';
 })
 export class SingleMangaComponent implements OnInit {
 
-  manga: manga
+  dataManga: manga[]
+  manga: manga = new manga()
 
-  constructor(private mangaService: articoliService) { }
+  constructor(private mangaService: articoliService,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-
+    this.mangaService.getManga().subscribe(data => {
+      this.dataManga = data
+      this.route.paramMap.subscribe((obs) => {
+        const id = obs.get("id")
+        this.manga = this.mangaService.getSingleManga(id)
+      })
+    })
   }
 
 }
