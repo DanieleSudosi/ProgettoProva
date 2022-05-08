@@ -18,13 +18,25 @@ export class SingleGameComponent implements OnInit {
 
   ngOnInit(): void { 
 
-    this.route.params.subscribe(
-      (params: Params)=>{
-        this.game = this.gameService.getSingleGame(params['id'])
-        // console.log(this.game);
+    console.log(this.gameService.allGames)
+
+    this.route.paramMap.subscribe((obs) => {
+      const id = obs.get("id")
+      console.log(id);
+      this.game = this.gameService.getSingleGame(id)
+    });
+    console.log(this.game);
+
+
+    // this.route.params.subscribe(
+    //   (params: Params)=>{
+    //     this.game = this.gameService.getSingleGame(params['id'])
         
-       }
-    )
+    //    }
+    // )
+
+
+   
     
   }
 
