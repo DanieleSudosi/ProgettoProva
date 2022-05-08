@@ -17,8 +17,7 @@ export class SingleSerieComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.serieService.getSerie().subscribe(data => {
-      this.dataSerie = data
+    this.serieService.getSerie().subscribe(() => {
       this.route.paramMap.subscribe((obs) => {
         const id = obs.get("id")
         this.serie = this.serieService.getSingleSerie(id)

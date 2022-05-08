@@ -17,8 +17,7 @@ export class SingleGameComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit(): void { 
-    this.gameService.getGames().subscribe(data => {
-      this.dataGames = data
+    this.gameService.getGames().subscribe(() => {
       this.route.paramMap.subscribe((obs) => {
         const id = obs.get("id")
         this.game = this.gameService.getSingleGame(id)

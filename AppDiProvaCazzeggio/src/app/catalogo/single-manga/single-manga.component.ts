@@ -17,8 +17,7 @@ export class SingleMangaComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.mangaService.getManga().subscribe(data => {
-      this.dataManga = data
+    this.mangaService.getManga().subscribe(() => {
       this.route.paramMap.subscribe((obs) => {
         const id = obs.get("id")
         this.manga = this.mangaService.getSingleManga(id)
