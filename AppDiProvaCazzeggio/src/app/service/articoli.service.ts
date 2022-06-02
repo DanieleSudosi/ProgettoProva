@@ -19,7 +19,7 @@ export class articoliService{
 
 
     getGames(){
-        return this.http.get<{[key: string]: Game}>("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/games.json")
+        return this.http.get("http://localhost:8080/api/game")
         .pipe(map(data =>{
             const gameArray: Game[] = []
 
@@ -36,7 +36,7 @@ export class articoliService{
     }
 
     getManga(){
-        return this.http.get<{[key: string]: manga}>("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/manga.json")
+        return this.http.get<{[key: string]: manga}>("http://localhost:8080/api/manga")
         .pipe(map(data =>{
             const mangaArray: manga[] = []
 
@@ -51,7 +51,7 @@ export class articoliService{
     }
 
     getSerie(){
-        return this.http.get<{[key: string]: serieTv}>("https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/serie.json")
+        return this.http.get<{[key: string]: serieTv}>("http://localhost:8080/api/serie")
         .pipe(map(data =>{
             const serieArray: serieTv[] = []
 
