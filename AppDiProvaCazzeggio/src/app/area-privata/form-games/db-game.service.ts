@@ -12,8 +12,8 @@ export class dbService {
 
 	constructor(private http: HttpClient) { }
 
-    addGame(title: string, softHouse: string, genre: string, publisher: string, release: string, price: number, description: string, img:string){
-        const dataGame: Game = {title: title, softHouse: softHouse, genre: genre, publisher: publisher, release: release, price: price, description: description, img:img}
+    addGame(title: string, softHouse: string, genre: string, publisher: string, pubDate: string, price: number, description: string, img:string){
+        const dataGame: Game = {title: title, softHouse: softHouse, genre: genre, publisher: publisher, pubDate: pubDate, price: price, description: description, img:img}
         
         this.http.post(
             'https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/games.json',

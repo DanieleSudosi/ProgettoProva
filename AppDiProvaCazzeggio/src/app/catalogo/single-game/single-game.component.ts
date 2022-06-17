@@ -21,6 +21,8 @@ export class SingleGameComponent implements OnInit {
       this.route.paramMap.subscribe((obs) => {
         const id = obs.get("id")
         this.game = this.gameService.getSingleGame(id)
+        console.log(this.game);
+        
       });
     }) 
   }

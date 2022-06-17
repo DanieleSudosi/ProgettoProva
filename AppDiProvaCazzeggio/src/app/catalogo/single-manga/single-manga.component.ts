@@ -21,6 +21,8 @@ export class SingleMangaComponent implements OnInit {
       this.route.paramMap.subscribe((obs) => {
         const id = obs.get("id")
         this.manga = this.mangaService.getSingleManga(id)
+        console.log(this.manga);
+        
       })
     })
   }

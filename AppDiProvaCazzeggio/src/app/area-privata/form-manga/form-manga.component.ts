@@ -15,8 +15,8 @@ export class FormMangaComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  creaManga(dataManga: {title: string, mangaka: string, genre: string, publisher: string, release: string, status: string, volumi: number, price: number, description: string, img: string}, mioForm){
-    this.dbMangaService.addManga(dataManga.title, dataManga.mangaka, dataManga.genre, dataManga.publisher, dataManga.release, dataManga.status, dataManga.volumi, dataManga.price, dataManga.description, dataManga.img)
+  creaManga(dataManga: {title: string, mangaka: string, genre: string, publisher: string, pubDate: string, stato: string, volumi: number, price: number, description: string, img: string}, mioForm){
+    this.dbMangaService.addManga(dataManga.title, dataManga.mangaka, dataManga.genre, dataManga.publisher, dataManga.pubDate, dataManga.stato, dataManga.volumi, dataManga.price, dataManga.description, dataManga.img)
     this.clearFilter(mioForm)
   }
 
