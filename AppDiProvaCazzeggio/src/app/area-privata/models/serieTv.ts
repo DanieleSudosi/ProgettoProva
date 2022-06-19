@@ -3,8 +3,8 @@ export class serieTv{
     production: string;
     genre: string;
     actors: string;
-    release: string;
-    status: string;
+    pubDate: string;
+    stato: string;
     price: number;
     writer: string;
     description: string;

@@ -15,8 +15,8 @@ export class FormGamesComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  creaGame(dataGame: {title: string, softHouse: string, genre: string, publisher: string, release: string, price: number, description: string, img:string}, mioForm){
-    this.dbService.addGame(dataGame.title, dataGame.softHouse, dataGame.genre, dataGame.publisher, dataGame.release, dataGame.price, dataGame.description, dataGame.img)
+  creaGame(dataGame: {title: string, softHouse: string, genre: string, publisher: string, pubDate: string, price: number, description: string, img:string}, mioForm){
+    this.dbService.addGame(dataGame.title, dataGame.softHouse, dataGame.genre, dataGame.publisher, dataGame.pubDate, dataGame.price, dataGame.description, dataGame.img)
     this.clearFilter(mioForm)
   }
 

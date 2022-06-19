@@ -16,8 +16,8 @@ export class FormSeriesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  creaSerie(dataSerie: {title: string, production: string, genre: string, actors: string, release: string, status: string, price: number, writer: string, description: string, img: string}, mioForm){
-    this.dbSerieService.addSerie(dataSerie.title, dataSerie.production, dataSerie.genre, dataSerie.actors, dataSerie.release, dataSerie.status, dataSerie.price, dataSerie.writer, dataSerie.description, dataSerie.img)
+  creaSerie(dataSerie: {title: string, production: string, genre: string, actors: string, pubDate: string, stato: string, price: number, writer: string, description: string, img: string}, mioForm){
+    this.dbSerieService.addSerie(dataSerie.title, dataSerie.production, dataSerie.genre, dataSerie.actors, dataSerie.pubDate, dataSerie.stato, dataSerie.price, dataSerie.writer, dataSerie.description, dataSerie.img)
     this.clearFilter(mioForm)
   }
 

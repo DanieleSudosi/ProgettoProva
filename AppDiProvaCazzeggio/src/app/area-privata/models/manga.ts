@@ -3,8 +3,8 @@ export class manga{
     mangaka: string;
     genre: string;
     publisher: string;
-    release: string;
-    status: string;
+    pubDate: string;
+    stato: string;
     volumi: number;
     price: number;
     description: string;

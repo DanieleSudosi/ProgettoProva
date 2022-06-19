@@ -3,7 +3,7 @@ export class Game{
     softHouse: string;
     genre: string;
     publisher: string;
-    release: string;
+    pubDate: string;
     price: number;
     description: string;
     img: string;
