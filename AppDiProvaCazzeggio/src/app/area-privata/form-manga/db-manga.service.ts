@@ -15,7 +15,7 @@ export class dbMangaService{
         const dataManga : manga = {title: title, mangaka: mangaka, genre: genre, publisher: publisher, release: release, status: status, volumi: volumi, price: price, description: description, img: img}
         
         this.http.post(
-            'https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/manga.json',
+            'http://localhost:8080/api/manga/add',
             dataManga
         ).subscribe(feed =>{
             console.log(feed);

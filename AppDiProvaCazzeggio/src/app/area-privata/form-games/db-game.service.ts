@@ -16,7 +16,7 @@ export class dbService {
         const dataGame: Game = {title: title, softHouse: softHouse, genre: genre, publisher: publisher, release: release, price: price, description: description, img:img}
         
         this.http.post(
-            'https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/games.json',
+            'http://localhost:8080/api/game/add',
             dataGame
         ).subscribe(game =>{
             console.log(game);

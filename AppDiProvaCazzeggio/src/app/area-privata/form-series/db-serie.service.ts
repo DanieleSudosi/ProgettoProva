@@ -16,7 +16,7 @@ export class dbSerieService{
         const dataSerie: serieTv = {title: title, production: production, genre: genre, actors: actors, release: release, status: status, price: price, writer: writer, description: description, img: img}
 
         this.http.post(
-            'https://negozio-27890-default-rtdb.europe-west1.firebasedatabase.app/serie.json',
+            'http://localhost:8080/api/serie/add',
             dataSerie
         ).subscribe(feed => {
             console.log(feed);
