@@ -1,0 +1,45 @@
+export class BaseCrudService {
+  constructor(protected http: HttpClient) {}
+  
+  protected url: string;
+  
+  //POST
+  public insert(objToInsert: any) {
+    return this.http.post(this.url, objToInsert);
+  }
+  
+  //GET
+   public get(objCriteria?: any) {
+    let criteria = '';
+    const keys = Object.keys(objCriteria);
+    for (let i = 0; i < keys.length; i++) {
+      if(i === 0) {
+        criteria = '?';
+      } else {
+        criteria = `${criteria}&`
+      }
+      const key = keys[i];
+      criteria = `${criteria}${key}${objCriteria[key]}`
+    }
+  }
+
+//GET PASSANDOGLI L'OGGETTO NEL BODY
+  public query(objCriteria?:any){
+    return this.http.post(this.url+"/filter", objCriteria? objCriteria:{})
+  }
+
+//GET SENZA CRITERIA
+  // public query(objCriteria?:any){
+  //   return this.http.get(this.url, objCriteria? objCriteria:{})
+  // }
+
+//PUT
+  public update(objToUpdate: any) {
+    return this.http.put(this.url, objToUpdate);
+  }
+
+//DELETE
+  public delete(idObjToDelete: Number) {
+    return this.http.request('delete', `${this.url}/${idObjToDelete}`);
+  }
+}
